@@ -1,122 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Manager</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        #fileList {
-            margin-top: 10px;
-        }
-        .file-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-        .file-name {
-            flex-grow: 1;
-        }
-        .file-name.active {
-            font-weight: bold;
-            color: blue;
-        }
-        #editor {
-            width: 100%;
-            height: 300px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            font-family: monospace;
-            font-size: 14px;
-            white-space: pre;
-            overflow-wrap: break-word;
-            background-color: #f5f5f5;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/theme/monokai.min.css">
 </head>
 <body>
-    <h1>File Manager</h1>
-    <input type="file" id="fileInput">
-    <button onclick="createNewFile()">Tạo File Mới</button>
-    <input type="text" id="newFileName" placeholder="Nhập tên file mới">
-    <div id="fileList"></div>
-    <div id="editor" contenteditable="true"></div>
-    <script>
-        const fileList = document.getElementById('fileList');
-        const newFileName = document.getElementById('newFileName');
-        const editor = document.getElementById('editor');
-
-        // Load saved files
-        const savedFiles = JSON.parse(localStorage.getItem('files')) || [];
-
-        savedFiles.forEach(file => {
-            displayFile(file.name, file.content);
-        });
-
-        function displayFile(fileName, fileContent) {
-            const fileItem = document.createElement('div');
-            fileItem.className = 'file-item';
-            fileItem.innerHTML = `
-                <span class="file-name" onclick="loadFileContent('${fileName}')">${fileName}</span>
-                <button onclick="deleteFile('${fileName}', this)">Xóa</button>
-            `;
-            fileList.appendChild(fileItem);
-        }
-
-        function createNewFile() {
-            const fileName = newFileName.value;
-            if (fileName.trim() !== '') {
-                editor.innerText = '';
-                saveFile(fileName, '');
-                displayFile(fileName, '');
-                newFileName.value = '';
-            } else {
-                alert('Vui lòng nhập tên file');
-            }
-        }
-
-        function saveFile(fileName, content) {
-            const files = JSON.parse(localStorage.getItem('files')) || [];
-            const fileIndex = files.findIndex(file => file.name === fileName);
-            if (fileIndex > -1) {
-                files[fileIndex].content = content;
-            } else {
-                files.push({ name: fileName, content: content });
-            }
-            localStorage.setItem('files', JSON.stringify(files));
-        }
-
-        function loadFileContent(fileName) {
-            const files = JSON.parse(localStorage.getItem('files')) || [];
-            const file = files.find(file => file.name === fileName);
-            if (file) {
-                editor.innerText = file.content;
-                document.querySelectorAll('.file-name').forEach(el => el.classList.remove('active'));
-                document.querySelector(`.file-name[onclick="loadFileContent('${fileName}')"]`).classList.add('active');
-            }
-        }
-
-        editor.addEventListener('input', () => {
-            const currentFileName = document.querySelector('.file-item .file-name.active')?.innerText;
-            if (currentFileName) {
-                saveFile(currentFileName, editor.innerText);
-            }
-        });
-
-        function deleteFile(fileName, button) {
-            const files = JSON.parse(localStorage.getItem('files')) || [];
-            const updatedFiles = files.filter(file => file.name !== fileName);
-            localStorage.setItem('files', JSON.stringify(updatedFiles));
-            const fileItem = button.parentElement;
-            fileList.removeChild(fileItem);
-            if (document.querySelector('.file-item .file-name.active')?.innerText === fileName) {
-                editor.innerText = '';
-            }
-        }
-    </script>
+    <div id="login-container">
+        <h1>Đăng Nhập</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Tên người dùng" required>
+            <input type="password" id="password" placeholder="Mật khẩu" required>
+            <button type="submit">Đăng Nhập</button>
+        </form>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+    <div id="home-container" style="display: none;">
+        <div id="taskbar">
+            <div id="logo">
+                <img src="https://ih1.redbubble.net/image.5115610125.1309/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Logo">
+            </div>
+            <input type="text" id="search-file" placeholder="Tìm kiếm tên file">
+            <div id="file-list" class="scrollable">
+            </div>
+            <form id="file-form">
+                <input type="text" id="file-name" placeholder="Tên file" required>
+                <select id="file-type" required>
+                    <option value="cpp">C++</option>
+                    <option value="py">Python</option>
+                </select>
+                <button type="submit">Add File</button>
+            </form>
+            <button id="logout-button" style="margin-top: auto;">Đăng Xuất</button>
+        </div>
+        <div id="content">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/clike/clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/addon/edit/matchbrackets.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
