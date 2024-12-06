@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, purple, yellow); /* Nền gradient cho trang đăng nhập */
+    background: linear-gradient(135deg, purple, yellow);
 }
 
 #login-container {
@@ -46,7 +46,8 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: white; /* Nền trắng cho trang chủ */
+    background-color: white; 
+    position: relative;
 }
 
 #taskbar {
@@ -56,9 +57,9 @@ body {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Thêm hiệu ứng shadow */
-    overflow-y: auto; /* Cho phép cuộn */
-    transition: transform 0.3s ease, width 0.3s ease; /* Hiệu ứng chuyển động khi ẩn/hiện taskbar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; 
+    transition: transform 0.3s ease, width 0.3s ease;
 }
 
 #taskbar.hidden {
@@ -66,7 +67,7 @@ body {
     width: 0;
 }
 
-#toggle-taskbar {
+#toggle-taskbar, #share-button {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -78,6 +79,14 @@ body {
     cursor: pointer;
 }
 
+#share-button {
+    right: 120px; 
+}
+
+#toggle-taskbar:hover, #share-button:hover {
+    background-color: #45a049;
+}
+
 #logo {
     display: flex;
     justify-content: center;
@@ -86,10 +95,10 @@ body {
 
 #logo img {
     max-width: 100%;
-    max-height: 100px; /* Đặt chiều cao tối đa */
+    max-height: 100px; 
     height: auto;
-    width: auto; /* Đảm bảo tỉ lệ hình ảnh không bị thay đổi */
-    border-radius: 10px; /* Bo tròn góc hình ảnh */
+    width: auto; 
+    border-radius: 10px; 
 }
 
 #search-file {
@@ -125,8 +134,8 @@ body {
 
 #file-list {
     flex-grow: 1;
-    overflow-y: auto; /* Cuộn danh sách file */
-    max-height: calc(100vh - 360px); /* Đảm bảo taskbar không kéo cả trang xuống */
+    overflow-y: auto; 
+    max-height: calc(100vh - 360px); 
 }
 
 #file-list a {
@@ -135,7 +144,7 @@ body {
     text-decoration: none;
     margin-bottom: 10px;
     display: block;
-    border-radius: 5px; /* Bo tròn góc */
+    border-radius: 5px; 
 }
 
 #file-list a:hover {
@@ -145,11 +154,11 @@ body {
 #content {
     flex-grow: 1;
     padding: 20px;
-    transition: width 0.3s ease; /* Hiệu ứng chuyển động khi thay đổi kích thước nội dung */
+    transition: width 0.3s ease; 
 }
 
 #content.full-width {
-    width: calc(100% - 20px); /* Trả lại toàn bộ diện tích khi taskbar ẩn */
+    width: calc(100% - 20px); 
 }
 
 h1 {
