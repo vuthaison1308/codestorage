@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Manager</title>
+    <title>Gists Manager by Theaug</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Thêm CodeMirror CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/theme/monokai.min.css">
 </head>
@@ -20,14 +19,12 @@
         <p id="error-message" style="color: red;"></p>
     </div>
     <div id="home-container" style="display: none;">
-        <button id="toggle-taskbar">Hide Taskbar</button>
         <div id="taskbar">
             <div id="logo">
                 <img src="https://ih1.redbubble.net/image.5115610125.1309/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Logo">
             </div>
             <input type="text" id="search-file" placeholder="Tìm kiếm tên file">
             <div id="file-list" class="scrollable">
-                <!-- Danh sách file sẽ được thêm vào đây -->
             </div>
             <form id="file-form">
                 <input type="text" id="file-name" placeholder="Tên file" required>
@@ -40,8 +37,9 @@
             <button id="logout-button" style="margin-top: auto;">Đăng Xuất</button>
         </div>
         <div id="content">
-            <!-- Nội dung sẽ được hiển thị ở đây -->
         </div>
+        <button id="toggle-taskbar">Hide Taskbar</button>
+        <button id="share-button">Share Code</button>
     </div>
     <!-- Thêm CodeMirror JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"></script>
