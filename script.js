@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const errorMessage = document.getElementById("error-message");
     const logoutButton = document.getElementById("logout-button");
     const toggleTaskbarButton = document.getElementById("toggle-taskbar");
+    const shareButton = document.getElementById("share-button");
     const fileForm = document.getElementById("file-form");
     const fileNameInput = document.getElementById("file-name");
     const fileTypeInput = document.getElementById("file-type");
@@ -15,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const content = document.getElementById("content");
     const searchFileInput = document.getElementById("search-file");
     let codeMirrorInstances = {};
+    let activeFileName = null;
 
-    // Kiểm tra trạng thái đăng nhập
     if (localStorage.getItem("loggedIn") === "true") {
         showHomePage();
     }
@@ -38,10 +39,21 @@ document.addEventListener("DOMContentLoaded", function() {
         const taskbar = document.getElementById("taskbar");
         if (taskbar.classList.contains("hidden")) {
             taskbar.classList.remove("hidden");
-            toggleTaskbarButton.textContent = "Ẩn Taskbar";
+            toggleTaskbarButton.textContent = "Hide Taskbar";
+            content.classList.remove("full-width");
         } else {
             taskbar.classList.add("hidden");
-            toggleTaskbarButton.textContent = "Hiện Taskbar";
+            toggleTaskbarButton.textContent = "Show Taskbar";
+            content.classList.add("full-width");
+        }
+    });
+
+    shareButton.addEventListener("click", function() {
+        if (activeFileName && codeMirrorInstances[activeFileName]) {
+            const fileContent = codeMirrorInstances[activeFileName].getValue();
+            createGist(activeFileName, fileContent);
+        } else {
+            alert("No file selected or file content is not available.");
         }
     });
 
@@ -85,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
         fileContainer.appendChild(deleteButton);
         fileList.appendChild(fileContainer);
 
-        // Lưu file vào localStorage
         let files = JSON.parse(localStorage.getItem("files")) || [];
         if (!files.includes(fileName)) {
             files.push(fileName);
@@ -130,7 +141,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function displayFileContent(fileName) {
-        content.innerHTML = ''; // Xóa nội dung hiện tại
+        content.innerHTML = ''; 
+
+        activeFileName = fileName;
 
         const fileHeader = document.createElement("h1");
         fileHeader.textContent = fileName;
@@ -139,11 +152,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const codeMirrorTextarea = document.createElement("textarea");
         content.appendChild(codeMirrorTextarea);
 
-        // Xác định chế độ của CodeMirror dựa trên phần mở rộng của file
         const fileExtension = fileName.split('.').pop();
         const mode = fileExtension === 'py' ? 'python' : 'text/x-c++src';
 
-        // Sử dụng CodeMirror để tạo hộp nhập mã code
         if (codeMirrorInstances[fileName]) {
             codeMirrorInstances[fileName].toTextArea();
         }
@@ -155,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function() {
             matchBrackets: true
         });
 
-        // Hiển thị nội dung file nếu có trong localStorage
         const savedContent = localStorage.getItem(`file_${fileName}`);
         if (savedContent) {
             codeMirrorInstances[fileName].setValue(savedContent);
@@ -173,14 +183,17 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem("files", JSON.stringify(files));
         localStorage.removeItem(`file_${fileName}`);
         delete codeMirrorInstances[fileName];
+
+        if (activeFileName === fileName) {
+            activeFileName = null;
+        }
     }
 
     function showHomePage() {
         loginContainer.style.display = "none";
         homeContainer.style.display = "flex";
-        document.body.style.background = "white"; // Thay đổi nền trang chủ sang màu trắng
+        document.body.style.background = "white"; 
 
-        // Tải danh sách file từ localStorage
         let files = JSON.parse(localStorage.getItem("files")) || [];
         files.sort();
         renderFileList(files);
@@ -190,4 +203,74 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.removeItem("loggedIn");
         location.reload();
     });
+
+    function createGist(fileName, fileContent) {
+        const data = {
+            description: "Chia sẻ bởi Gist Manager - theaug",
+            public: true,
+            files: {
+                [fileName]: {
+                    content: fileContent
+                }
+            }
+        };
+
+        fetch('https://api.github.com/gists', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'token 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' // Thay YOUR_GITHUB_TOKEN bằng token GitHub của bạn
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            const gistUrl = data.html_url;
+            if (gistUrl) {
+                shortenUrl(gistUrl);
+            } else {
+                alert('Lỗi tạo gist. Vui lòng kiểm tra lại quyền và hạn sử dụng github token.');
+            }
+        })
+        .catch(error => {
+            console.error('Lỗi tạo gist:', error);
+            alert('Không thể tạo gist, vui lòng kiểm tra lại quyền và hạn sử dụng github token');
+        });
+    }
+
+    function shortenUrl(url) {
+        fetch(`https://api.tinyurl.com/create?api_token=uOBJYZcZRXn8zj0eeNF4OYcJ9mNXV1p3pI8dgdtaULA00oCIXC2AJAgGEUy2`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                url: url,
+                domain: "tinyurl.com"
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            const shortUrl = data.data.tiny_url;
+            if (shortUrl) {
+                copyToClipboard(shortUrl);
+                alert(`Link code của bạn: ${shortUrl} (đã được lưu vào clipboard)`);
+            } else {
+                alert('Không thể rút gọn link, vui lòng kiểm tra lại API.');
+            }
+        })
+        .catch(error => {
+            console.error('Lỗi rút gọn link: ', error);
+            alert('Không thể rút gọn link, vui lòng kiểm tra lại API.');
+        });
+    }
+
+    function copyToClipboard(text) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+    }
 });
