@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const homeContainer = document.getElementById("home-container");
     const errorMessage = document.getElementById("error-message");
     const logoutButton = document.getElementById("logout-button");
+    const toggleTaskbarButton = document.getElementById("toggle-taskbar");
     const fileForm = document.getElementById("file-form");
     const fileNameInput = document.getElementById("file-name");
     const fileTypeInput = document.getElementById("file-type");
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const searchFileInput = document.getElementById("search-file");
     let codeMirrorInstances = {};
 
+    // Kiểm tra trạng thái đăng nhập
     if (localStorage.getItem("loggedIn") === "true") {
         showHomePage();
     }
@@ -29,6 +31,17 @@ document.addEventListener("DOMContentLoaded", function() {
             showHomePage();
         } else {
             errorMessage.textContent = "Tên người dùng hoặc mật khẩu không chính xác.";
+        }
+    });
+
+    toggleTaskbarButton.addEventListener("click", function() {
+        const taskbar = document.getElementById("taskbar");
+        if (taskbar.classList.contains("hidden")) {
+            taskbar.classList.remove("hidden");
+            toggleTaskbarButton.textContent = "Ẩn Taskbar";
+        } else {
+            taskbar.classList.add("hidden");
+            toggleTaskbarButton.textContent = "Hiện Taskbar";
         }
     });
 
@@ -72,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
         fileContainer.appendChild(deleteButton);
         fileList.appendChild(fileContainer);
 
+        // Lưu file vào localStorage
         let files = JSON.parse(localStorage.getItem("files")) || [];
         if (!files.includes(fileName)) {
             files.push(fileName);
@@ -116,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function displayFileContent(fileName) {
-        content.innerHTML = '';
+        content.innerHTML = ''; // Xóa nội dung hiện tại
 
         const fileHeader = document.createElement("h1");
         fileHeader.textContent = fileName;
@@ -125,9 +139,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const codeMirrorTextarea = document.createElement("textarea");
         content.appendChild(codeMirrorTextarea);
 
+        // Xác định chế độ của CodeMirror dựa trên phần mở rộng của file
         const fileExtension = fileName.split('.').pop();
         const mode = fileExtension === 'py' ? 'python' : 'text/x-c++src';
 
+        // Sử dụng CodeMirror để tạo hộp nhập mã code
         if (codeMirrorInstances[fileName]) {
             codeMirrorInstances[fileName].toTextArea();
         }
@@ -139,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
             matchBrackets: true
         });
 
+        // Hiển thị nội dung file nếu có trong localStorage
         const savedContent = localStorage.getItem(`file_${fileName}`);
         if (savedContent) {
             codeMirrorInstances[fileName].setValue(savedContent);
@@ -161,8 +178,9 @@ document.addEventListener("DOMContentLoaded", function() {
     function showHomePage() {
         loginContainer.style.display = "none";
         homeContainer.style.display = "flex";
-        document.body.style.background = "white"; 
+        document.body.style.background = "white"; // Thay đổi nền trang chủ sang màu trắng
 
+        // Tải danh sách file từ localStorage
         let files = JSON.parse(localStorage.getItem("files")) || [];
         files.sort();
         renderFileList(files);
