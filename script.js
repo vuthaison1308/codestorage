@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'token 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' // Thay YOUR_GITHUB_TOKEN bằng token GitHub của bạn
+                'Authorization': 'token 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' // Thay YOUR_GITHUB_TOKEN bằng token GitHub của bạn
             },
             body: JSON.stringify(data)
         })
