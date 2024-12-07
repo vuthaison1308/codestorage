@@ -1,1 +1,276 @@
-function _0x5d28(_0x5d7258,_0x1ff045){const _0x3e46b2=_0x3e46();return _0x5d28=function(_0x5d286f,_0x115512){_0x5d286f=_0x5d286f-0xcb;let _0x3ed029=_0x3e46b2[_0x5d286f];return _0x3ed029;},_0x5d28(_0x5d7258,_0x1ff045);}function _0x3e46(){const _0x422c44=['theaug1308','body','12501wNrTvn','260ogqrYG','file-type','login-form','fromTextArea','Link\x20code\x20của\x20bạn:\x20','setItem','6XiftOJ','style','loggedIn','Không\x20thể\x20rút\x20gọn\x20link,\x20vui\x20lòng\x20kiểm\x20tra\x20lại\x20API.','tiny_url','stringify','flexGrow','then','click','Không\x20thể\x20tạo\x20gist,\x20vui\x20lòng\x20kiểm\x20tra\x20lại\x20quyền\x20và\x20hạn\x20sử\x20dụng\x20github\x20token','Show\x20Taskbar','value','remove','flex','submit','marginLeft','1xzZaRA','Chia\x20sẻ\x20bởi\x20Gist\x20Manager\x20-\x20theaug','alignItems','1576655uDcToM','8898981vURPYY','application/json','No\x20file\x20selected\x20or\x20file\x20content\x20is\x20not\x20available.','full-width','🗑️','background','password','copy','addEventListener','file_','data','sort','select','toTextArea','token\x20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','split','none','hidden','execCommand','search-file','3lTAEBq','href','username','1918852hNAWuu','245311XWtKDz','getValue','innerHTML','taskbar','home-container','Lỗi\x20tạo\x20gist:','9184SREQVk','contains','https://api.github.com/gists','setValue','file-name','textContent','json','1535064NQkRPr','target','getItem','python','https://api.tinyurl.com/create?api_token=uOBJYZcZRXn8zj0eeNF4OYcJ9mNXV1p3pI8dgdtaULA00oCIXC2AJAgGEUy2','true','Tên\x20người\x20dùng\x20hoặc\x20mật\x20khẩu\x20không\x20chính\x20xác.','classList','display','createElement','content','div','tinyurl.com','textarea','170ClEPSY','parse','share-button','center','button','includes','appendChild','push','reload','getElementById','POST','html_url','10px','DOMContentLoaded','filter','1750006Vqadiz','toLowerCase','error','files','preventDefault','catch'];_0x3e46=function(){return _0x422c44;};return _0x3e46();}const _0x4ff56c=_0x5d28;(function(_0x4bbd34,_0x4fc36c){const _0xc8c2bf=_0x5d28,_0x309c04=_0x4bbd34();while(!![]){try{const _0x5b7a44=parseInt(_0xc8c2bf(0xe4))/0x1*(-parseInt(_0xc8c2bf(0x12a))/0x2)+-parseInt(_0xc8c2bf(0xfc))/0x3*(parseInt(_0xc8c2bf(0xff))/0x4)+-parseInt(_0xc8c2bf(0xe7))/0x5+-parseInt(_0xc8c2bf(0xd4))/0x6*(parseInt(_0xc8c2bf(0xe8))/0x7)+-parseInt(_0xc8c2bf(0x106))/0x8*(-parseInt(_0xc8c2bf(0xcd))/0x9)+parseInt(_0xc8c2bf(0x11b))/0xa*(-parseInt(_0xc8c2bf(0x100))/0xb)+parseInt(_0xc8c2bf(0x10d))/0xc*(parseInt(_0xc8c2bf(0xce))/0xd);if(_0x5b7a44===_0x4fc36c)break;else _0x309c04['push'](_0x309c04['shift']());}catch(_0x3ad02c){_0x309c04['push'](_0x309c04['shift']());}}}(_0x3e46,0xcb435),document['addEventListener'](_0x4ff56c(0x128),function(){const _0x4ffc03=_0x4ff56c,_0x2deabb=_0x4ffc03(0xcb),_0x13cb2e='!Heheboai1',_0x4b847d=document[_0x4ffc03(0x124)](_0x4ffc03(0xd0)),_0x192dd9=document[_0x4ffc03(0x124)]('login-container'),_0x2dc5b0=document[_0x4ffc03(0x124)](_0x4ffc03(0x104)),_0x8893c0=document[_0x4ffc03(0x124)]('error-message'),_0x397a2e=document['getElementById']('logout-button'),_0x428052=document[_0x4ffc03(0x124)]('toggle-taskbar'),_0xd6805b=document[_0x4ffc03(0x124)](_0x4ffc03(0x11d)),_0x434109=document[_0x4ffc03(0x124)]('file-form'),_0x3eb25a=document[_0x4ffc03(0x124)](_0x4ffc03(0x10a)),_0x220688=document[_0x4ffc03(0x124)](_0x4ffc03(0xcf)),_0x58ddd4=document[_0x4ffc03(0x124)]('file-list'),_0x4ebd31=document[_0x4ffc03(0x124)](_0x4ffc03(0x117)),_0x56d318=document[_0x4ffc03(0x124)](_0x4ffc03(0xfb));let _0x1a7d13={},_0x3f9bcc=null;localStorage[_0x4ffc03(0x10f)]('loggedIn')===_0x4ffc03(0x112)&&_0x2aa3ec();_0x4b847d[_0x4ffc03(0xf0)](_0x4ffc03(0xe2),function(_0x56de6f){const _0x508c77=_0x4ffc03;_0x56de6f[_0x508c77(0x12e)]();const _0x151a98=document['getElementById'](_0x508c77(0xfe))[_0x508c77(0xdf)],_0xa89c96=document[_0x508c77(0x124)](_0x508c77(0xee))[_0x508c77(0xdf)];_0x151a98===_0x2deabb&&_0xa89c96===_0x13cb2e?(localStorage[_0x508c77(0xd3)](_0x508c77(0xd6),_0x508c77(0x112)),_0x2aa3ec()):_0x8893c0[_0x508c77(0x10b)]=_0x508c77(0x113);}),_0x428052[_0x4ffc03(0xf0)]('click',function(){const _0x1040a3=_0x4ffc03,_0x4e9e75=document['getElementById'](_0x1040a3(0x103));_0x4e9e75[_0x1040a3(0x114)][_0x1040a3(0x107)](_0x1040a3(0xf9))?(_0x4e9e75[_0x1040a3(0x114)][_0x1040a3(0xe0)](_0x1040a3(0xf9)),_0x428052[_0x1040a3(0x10b)]='Hide\x20Taskbar',_0x4ebd31[_0x1040a3(0x114)][_0x1040a3(0xe0)](_0x1040a3(0xeb))):(_0x4e9e75[_0x1040a3(0x114)]['add']('hidden'),_0x428052[_0x1040a3(0x10b)]=_0x1040a3(0xde),_0x4ebd31[_0x1040a3(0x114)]['add']('full-width'));}),_0xd6805b['addEventListener'](_0x4ffc03(0xdc),function(){const _0x110cb4=_0x4ffc03;if(_0x3f9bcc&&_0x1a7d13[_0x3f9bcc]){const _0x14f662=_0x1a7d13[_0x3f9bcc][_0x110cb4(0x101)]();_0xf3a890(_0x3f9bcc,_0x14f662);}else alert(_0x110cb4(0xea));}),_0x434109[_0x4ffc03(0xf0)](_0x4ffc03(0xe2),function(_0x4f3927){const _0x3636c5=_0x4ffc03;_0x4f3927[_0x3636c5(0x12e)]();const _0x19951d=_0x3eb25a['value']['trim'](),_0x57d071=_0x220688[_0x3636c5(0xdf)];if(_0x19951d){const _0x1dc54c=_0x19951d+'.'+_0x57d071;_0x5e22cf(_0x1dc54c),_0x3eb25a[_0x3636c5(0xdf)]='';}}),_0x56d318['addEventListener']('input',function(_0xabe32c){const _0x3dc2af=_0x4ffc03,_0x130c39=_0xabe32c[_0x3dc2af(0x10e)][_0x3dc2af(0xdf)][_0x3dc2af(0x12b)]();_0x3c6939(_0x130c39);});function _0x5e22cf(_0x10bffd){const _0x71945a=_0x4ffc03,_0xdb3188=document['createElement'](_0x71945a(0x118));_0xdb3188[_0x71945a(0xd5)][_0x71945a(0x115)]='flex',_0xdb3188['style'][_0x71945a(0xe6)]=_0x71945a(0x11e);const _0x2b67a7=document[_0x71945a(0x116)]('a');_0x2b67a7[_0x71945a(0xfd)]='#',_0x2b67a7[_0x71945a(0x10b)]=_0x10bffd,_0x2b67a7['style'][_0x71945a(0xda)]='1',_0x2b67a7[_0x71945a(0xf0)](_0x71945a(0xdc),function(){_0x5f2934(_0x10bffd);});const _0x369acb=document['createElement'](_0x71945a(0x11f));_0x369acb['textContent']=_0x71945a(0xec),_0x369acb['style'][_0x71945a(0xe3)]='10px',_0x369acb[_0x71945a(0xf0)]('click',function(){_0x385ea0(_0x10bffd,_0xdb3188);}),_0xdb3188[_0x71945a(0x121)](_0x2b67a7),_0xdb3188[_0x71945a(0x121)](_0x369acb),_0x58ddd4['appendChild'](_0xdb3188);let _0x3640b7=JSON[_0x71945a(0x11c)](localStorage['getItem'](_0x71945a(0x12d)))||[];!_0x3640b7[_0x71945a(0x120)](_0x10bffd)&&(_0x3640b7[_0x71945a(0x122)](_0x10bffd),_0x3640b7[_0x71945a(0xf3)](),localStorage[_0x71945a(0xd3)]('files',JSON[_0x71945a(0xd9)](_0x3640b7)),_0x57addb(_0x3640b7));}function _0x57addb(_0x3cf878){const _0x5088ae=_0x4ffc03;_0x58ddd4[_0x5088ae(0x102)]='',_0x3cf878['forEach'](function(_0x54dfba){const _0x584698=_0x5088ae,_0x235be5=document['createElement']('div');_0x235be5[_0x584698(0xd5)]['display']=_0x584698(0xe1),_0x235be5[_0x584698(0xd5)][_0x584698(0xe6)]=_0x584698(0x11e);const _0x445002=document[_0x584698(0x116)]('a');_0x445002[_0x584698(0xfd)]='#',_0x445002[_0x584698(0x10b)]=_0x54dfba,_0x445002['style']['flexGrow']='1',_0x445002[_0x584698(0xf0)](_0x584698(0xdc),function(){_0x5f2934(_0x54dfba);});const _0x2e7e0c=document[_0x584698(0x116)]('button');_0x2e7e0c[_0x584698(0x10b)]=_0x584698(0xec),_0x2e7e0c[_0x584698(0xd5)][_0x584698(0xe3)]=_0x584698(0x127),_0x2e7e0c['addEventListener'](_0x584698(0xdc),function(){_0x385ea0(_0x54dfba,_0x235be5);}),_0x235be5[_0x584698(0x121)](_0x445002),_0x235be5[_0x584698(0x121)](_0x2e7e0c),_0x58ddd4[_0x584698(0x121)](_0x235be5);});}function _0x3c6939(_0x3b8ecc){const _0x3a5228=_0x4ffc03;let _0x2a13bc=JSON[_0x3a5228(0x11c)](localStorage[_0x3a5228(0x10f)](_0x3a5228(0x12d)))||[];_0x2a13bc=_0x2a13bc[_0x3a5228(0x129)](_0x28597e=>_0x28597e[_0x3a5228(0x12b)]()[_0x3a5228(0x120)](_0x3b8ecc)),_0x57addb(_0x2a13bc);}function _0x5f2934(_0x11baa7){const _0x340f3d=_0x4ffc03;_0x4ebd31[_0x340f3d(0x102)]='',_0x3f9bcc=_0x11baa7;const _0x180e53=document['createElement']('h1');_0x180e53['textContent']=_0x11baa7,_0x4ebd31[_0x340f3d(0x121)](_0x180e53);const _0x2d3958=document[_0x340f3d(0x116)](_0x340f3d(0x11a));_0x4ebd31[_0x340f3d(0x121)](_0x2d3958);const _0x3f1cfc=_0x11baa7[_0x340f3d(0xf7)]('.')['pop'](),_0x5c0afd=_0x3f1cfc==='py'?_0x340f3d(0x110):'text/x-c++src';_0x1a7d13[_0x11baa7]&&_0x1a7d13[_0x11baa7][_0x340f3d(0xf5)]();_0x1a7d13[_0x11baa7]=CodeMirror[_0x340f3d(0xd1)](_0x2d3958,{'mode':_0x5c0afd,'theme':'monokai','lineNumbers':!![],'matchBrackets':!![]});const _0x4ecbd2=localStorage[_0x340f3d(0x10f)](_0x340f3d(0xf1)+_0x11baa7);_0x4ecbd2&&_0x1a7d13[_0x11baa7][_0x340f3d(0x109)](_0x4ecbd2),_0x1a7d13[_0x11baa7]['on']('change',function(){const _0x2eb6fa=_0x340f3d;localStorage[_0x2eb6fa(0xd3)](_0x2eb6fa(0xf1)+_0x11baa7,_0x1a7d13[_0x11baa7][_0x2eb6fa(0x101)]());});}function _0x385ea0(_0x27149a,_0x485718){const _0x33d41d=_0x4ffc03;_0x485718[_0x33d41d(0xe0)]();let _0x4515bf=JSON[_0x33d41d(0x11c)](localStorage['getItem'](_0x33d41d(0x12d)))||[];_0x4515bf=_0x4515bf[_0x33d41d(0x129)](_0x43336b=>_0x43336b!==_0x27149a),localStorage[_0x33d41d(0xd3)](_0x33d41d(0x12d),JSON['stringify'](_0x4515bf)),localStorage['removeItem']('file_'+_0x27149a),delete _0x1a7d13[_0x27149a],_0x3f9bcc===_0x27149a&&(_0x3f9bcc=null);}function _0x2aa3ec(){const _0x145014=_0x4ffc03;_0x192dd9[_0x145014(0xd5)][_0x145014(0x115)]=_0x145014(0xf8),_0x2dc5b0[_0x145014(0xd5)][_0x145014(0x115)]=_0x145014(0xe1),document['body'][_0x145014(0xd5)][_0x145014(0xed)]='white';let _0x2aa5f5=JSON['parse'](localStorage[_0x145014(0x10f)](_0x145014(0x12d)))||[];_0x2aa5f5['sort'](),_0x57addb(_0x2aa5f5);}_0x397a2e[_0x4ffc03(0xf0)](_0x4ffc03(0xdc),function(){const _0x47692d=_0x4ffc03;localStorage['removeItem'](_0x47692d(0xd6)),location[_0x47692d(0x123)]();});function _0xf3a890(_0x489012,_0x39133c){const _0x56cce9=_0x4ffc03,_0x529ec4={'description':_0x56cce9(0xe5),'public':!![],'files':{[_0x489012]:{'content':_0x39133c}}};fetch(_0x56cce9(0x108),{'method':_0x56cce9(0x125),'headers':{'Content-Type':_0x56cce9(0xe9),'Authorization':_0x56cce9(0xf6)},'body':JSON[_0x56cce9(0xd9)](_0x529ec4)})[_0x56cce9(0xdb)](_0x266d5a=>_0x266d5a[_0x56cce9(0x10c)]())[_0x56cce9(0xdb)](_0xf0ac3d=>{const _0x183d7e=_0x56cce9,_0x4c5bea=_0xf0ac3d[_0x183d7e(0x126)];_0x4c5bea?_0x58fdfa(_0x4c5bea):alert('Lỗi\x20tạo\x20gist.\x20Vui\x20lòng\x20kiểm\x20tra\x20lại\x20quyền\x20và\x20hạn\x20sử\x20dụng\x20github\x20token.');})[_0x56cce9(0x12f)](_0x500d30=>{const _0x476ba1=_0x56cce9;console[_0x476ba1(0x12c)](_0x476ba1(0x105),_0x500d30),alert(_0x476ba1(0xdd));});}function _0x58fdfa(_0x324577){const _0x4a3f3d=_0x4ffc03;fetch(_0x4a3f3d(0x111),{'method':_0x4a3f3d(0x125),'headers':{'Content-Type':'application/json'},'body':JSON['stringify']({'url':_0x324577,'domain':_0x4a3f3d(0x119)})})['then'](_0x3bb347=>_0x3bb347[_0x4a3f3d(0x10c)]())[_0x4a3f3d(0xdb)](_0x4cefc0=>{const _0x1ae6e0=_0x4a3f3d,_0x71a955=_0x4cefc0[_0x1ae6e0(0xf2)][_0x1ae6e0(0xd8)];_0x71a955?(_0x3436d0(_0x71a955),alert(_0x1ae6e0(0xd2)+_0x71a955+'\x20(đã\x20được\x20lưu\x20vào\x20clipboard)')):alert('Không\x20thể\x20rút\x20gọn\x20link,\x20vui\x20lòng\x20kiểm\x20tra\x20lại\x20API.');})[_0x4a3f3d(0x12f)](_0x545be5=>{const _0x410c8f=_0x4a3f3d;console[_0x410c8f(0x12c)]('Lỗi\x20rút\x20gọn\x20link:\x20',_0x545be5),alert(_0x410c8f(0xd7));});}function _0x3436d0(_0x4d810d){const _0x7e5038=_0x4ffc03,_0x36f0f9=document[_0x7e5038(0x116)]('textarea');_0x36f0f9[_0x7e5038(0xdf)]=_0x4d810d,document[_0x7e5038(0xcc)][_0x7e5038(0x121)](_0x36f0f9),_0x36f0f9[_0x7e5038(0xf4)](),document[_0x7e5038(0xfa)](_0x7e5038(0xef)),document[_0x7e5038(0xcc)]['removeChild'](_0x36f0f9);}}));
+document.addEventListener("DOMContentLoaded", function() {
+    const username = "theaug1308";
+    const password = "!Heheboai1";
+
+    const loginForm = document.getElementById("login-form");
+    const loginContainer = document.getElementById("login-container");
+    const homeContainer = document.getElementById("home-container");
+    const errorMessage = document.getElementById("error-message");
+    const logoutButton = document.getElementById("logout-button");
+    const toggleTaskbarButton = document.getElementById("toggle-taskbar");
+    const shareButton = document.getElementById("share-button");
+    const fileForm = document.getElementById("file-form");
+    const fileNameInput = document.getElementById("file-name");
+    const fileTypeInput = document.getElementById("file-type");
+    const fileList = document.getElementById("file-list");
+    const content = document.getElementById("content");
+    const searchFileInput = document.getElementById("search-file");
+    let codeMirrorInstances = {};
+    let activeFileName = null;
+
+    if (localStorage.getItem("loggedIn") === "true") {
+        showHomePage();
+    }
+
+    loginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const enteredUsername = document.getElementById("username").value;
+        const enteredPassword = document.getElementById("password").value;
+
+        if (enteredUsername === username && enteredPassword === password) {
+            localStorage.setItem("loggedIn", "true");
+            showHomePage();
+        } else {
+            errorMessage.textContent = "Tên người dùng hoặc mật khẩu không chính xác.";
+        }
+    });
+
+    toggleTaskbarButton.addEventListener("click", function() {
+        const taskbar = document.getElementById("taskbar");
+        if (taskbar.classList.contains("hidden")) {
+            taskbar.classList.remove("hidden");
+            toggleTaskbarButton.textContent = "Hide Taskbar";
+            content.classList.remove("full-width");
+        } else {
+            taskbar.classList.add("hidden");
+            toggleTaskbarButton.textContent = "Show Taskbar";
+            content.classList.add("full-width");
+        }
+    });
+
+    shareButton.addEventListener("click", function() {
+        if (activeFileName && codeMirrorInstances[activeFileName]) {
+            const fileContent = codeMirrorInstances[activeFileName].getValue();
+            createGist(activeFileName, fileContent);
+        } else {
+            alert("No file selected or file content is not available.");
+        }
+    });
+
+    fileForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const fileName = fileNameInput.value.trim();
+        const fileType = fileTypeInput.value;
+        if (fileName) {
+            const fullFileName = `${fileName}.${fileType}`;
+            addFileToList(fullFileName);
+            fileNameInput.value = '';
+        }
+    });
+
+    searchFileInput.addEventListener("input", function(event) {
+        const query = event.target.value.toLowerCase();
+        filterFileList(query);
+    });
+
+    function addFileToList(fileName) {
+        const fileContainer = document.createElement("div");
+        fileContainer.style.display = "flex";
+        fileContainer.style.alignItems = "center";
+
+        const fileLink = document.createElement("a");
+        fileLink.href = "#";
+        fileLink.textContent = fileName;
+        fileLink.style.flexGrow = "1";
+        fileLink.addEventListener("click", function() {
+            displayFileContent(fileName);
+        });
+
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "🗑️";
+        deleteButton.style.marginLeft = "10px";
+        deleteButton.addEventListener("click", function() {
+            deleteFile(fileName, fileContainer);
+        });
+
+        fileContainer.appendChild(fileLink);
+        fileContainer.appendChild(deleteButton);
+        fileList.appendChild(fileContainer);
+
+        let files = JSON.parse(localStorage.getItem("files")) || [];
+        if (!files.includes(fileName)) {
+            files.push(fileName);
+            files.sort();
+            localStorage.setItem("files", JSON.stringify(files));
+            renderFileList(files);
+        }
+    }
+
+    function renderFileList(files) {
+        fileList.innerHTML = '';
+        files.forEach(function(fileName) {
+            const fileContainer = document.createElement("div");
+            fileContainer.style.display = "flex";
+            fileContainer.style.alignItems = "center";
+
+            const fileLink = document.createElement("a");
+            fileLink.href = "#";
+            fileLink.textContent = fileName;
+            fileLink.style.flexGrow = "1";
+            fileLink.addEventListener("click", function() {
+                displayFileContent(fileName);
+            });
+
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "🗑️";
+            deleteButton.style.marginLeft = "10px";
+            deleteButton.addEventListener("click", function() {
+                deleteFile(fileName, fileContainer);
+            });
+
+            fileContainer.appendChild(fileLink);
+            fileContainer.appendChild(deleteButton);
+            fileList.appendChild(fileContainer);
+        });
+    }
+
+    function filterFileList(query) {
+        let files = JSON.parse(localStorage.getItem("files")) || [];
+        files = files.filter(file => file.toLowerCase().includes(query));
+        renderFileList(files);
+    }
+
+    function displayFileContent(fileName) {
+        content.innerHTML = ''; 
+
+        activeFileName = fileName;
+
+        const fileHeader = document.createElement("h1");
+        fileHeader.textContent = fileName;
+        content.appendChild(fileHeader);
+
+        const codeMirrorTextarea = document.createElement("textarea");
+        content.appendChild(codeMirrorTextarea);
+
+        const fileExtension = fileName.split('.').pop();
+        const mode = fileExtension === 'py' ? 'python' : 'text/x-c++src';
+
+        if (codeMirrorInstances[fileName]) {
+            codeMirrorInstances[fileName].toTextArea();
+        }
+
+        codeMirrorInstances[fileName] = CodeMirror.fromTextArea(codeMirrorTextarea, {
+            mode: mode,
+            theme: "monokai",
+            lineNumbers: true,
+            matchBrackets: true
+        });
+
+        const savedContent = localStorage.getItem(`file_${fileName}`);
+        if (savedContent) {
+            codeMirrorInstances[fileName].setValue(savedContent);
+        }
+
+        codeMirrorInstances[fileName].on("change", function() {
+            localStorage.setItem(`file_${fileName}`, codeMirrorInstances[fileName].getValue());
+        });
+    }
+
+    function deleteFile(fileName, fileContainer) {
+        fileContainer.remove();
+        let files = JSON.parse(localStorage.getItem("files")) || [];
+        files = files.filter(file => file !== fileName);
+        localStorage.setItem("files", JSON.stringify(files));
+        localStorage.removeItem(`file_${fileName}`);
+        delete codeMirrorInstances[fileName];
+
+        if (activeFileName === fileName) {
+            activeFileName = null;
+        }
+    }
+
+    function showHomePage() {
+        loginContainer.style.display = "none";
+        homeContainer.style.display = "flex";
+        document.body.style.background = "white"; 
+
+        let files = JSON.parse(localStorage.getItem("files")) || [];
+        files.sort();
+        renderFileList(files);
+    }
+
+    logoutButton.addEventListener("click", function() {
+        localStorage.removeItem("loggedIn");
+        location.reload();
+    });
+
+    function createGist(fileName, fileContent) {
+        const data = {
+            description: "Chia sẻ bởi Gist Manager - theaug",
+            public: true,
+            files: {
+                [fileName]: {
+                    content: fileContent
+                }
+            }
+        };
+
+        fetch('https://api.github.com/gists', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'token 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'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            const gistUrl = data.html_url;
+            if (gistUrl) {
+                shortenUrl(gistUrl);
+            } else {
+                alert('Lỗi tạo gist. Vui lòng kiểm tra lại quyền và hạn sử dụng github token.');
+            }
+        })
+        .catch(error => {
+            console.error('Lỗi tạo gist:', error);
+            alert('Không thể tạo gist, vui lòng kiểm tra lại quyền và hạn sử dụng github token');
+        });
+    }
+
+    function shortenUrl(url) {
+        fetch(`https://api.tinyurl.com/create?api_token=uOBJYZcZRXn8zj0eeNF4OYcJ9mNXV1p3pI8dgdtaULA00oCIXC2AJAgGEUy2`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                url: url,
+                domain: "tinyurl.com"
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            const shortUrl = data.data.tiny_url;
+            if (shortUrl) {
+                copyToClipboard(shortUrl);
+                alert(`Link code của bạn: ${shortUrl} (đã được lưu vào clipboard)`);
+            } else {
+                alert('Không thể rút gọn link, vui lòng kiểm tra lại API.');
+            }
+        })
+        .catch(error => {
+            console.error('Lỗi rút gọn link: ', error);
+            alert('Không thể rút gọn link, vui lòng kiểm tra lại API.');
+        });
+    }
+
+    function copyToClipboard(text) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+    }
+});
